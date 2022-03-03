@@ -1,3 +1,5 @@
+##Create a Matrix which can cache it's inverse
+
 makeVector <- function(x=matrix()){
   invm <- NULL
   set <- function(y){
@@ -11,6 +13,9 @@ makeVector <- function(x=matrix()){
        setInverseM = setInverseM,
        getInverseM=getInverseM)
 }
+
+##Returns the inverse for the cache
+
 cacheMean <- function(x,...){
   invm <- x$getInverseM()
   if(!is.null(invm)){
